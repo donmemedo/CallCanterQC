@@ -495,4 +495,5 @@ pyrightconfig.json
 /datasets/
 /tmp/
 /src/tmp/
+**/*.pt
 
