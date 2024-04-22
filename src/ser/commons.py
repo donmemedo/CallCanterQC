@@ -16,12 +16,12 @@ def get_model():
         nn.Linear(1024, 512), nn.LeakyReLU(), nn.Linear(512, 8)
     )
 
-    checkpoint_path = "../../models/201.pt"
-    model = models.densenet201(pretrained=True)
-    torch.save(model.state_dict(), "../../models/201.pt")
-    model.classifier = nn.Sequential(
-        nn.Linear(1920, 512), nn.LeakyReLU(), nn.Linear(512, 8)
-    )
+    # checkpoint_path = "../../models/201.pt"
+    # model = models.densenet201(pretrained=True)
+    # torch.save(model.state_dict(), "../../models/201.pt")
+    # model.classifier = nn.Sequential(
+    #     nn.Linear(1920, 512), nn.LeakyReLU(), nn.Linear(512, 8)
+    # )
 
     model.load_state_dict(torch.load(checkpoint_path, map_location="cpu"), strict=False)
     model.eval()
