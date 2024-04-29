@@ -9,12 +9,12 @@ import numpy as np
 
 
 def get_model():
-    checkpoint_path = "../../models/121.pt"
-    model = models.densenet121(pretrained=True)
-    torch.save(model.state_dict(), "../../models/121.pt")
-    model.classifier = nn.Sequential(
-        nn.Linear(1024, 512), nn.LeakyReLU(), nn.Linear(512, 8)
-    )
+    # checkpoint_path = "../../models/121.pt"
+    # model = models.densenet121(pretrained=True)
+    # torch.save(model.state_dict(), "../../models/121.pt")
+    # model.classifier = nn.Sequential(
+    #     nn.Linear(1024, 512), nn.LeakyReLU(), nn.Linear(512, 8)
+    # )
 
     # checkpoint_path = "../../models/201.pt"
     # model = models.densenet201(pretrained=True)
@@ -22,6 +22,12 @@ def get_model():
     # model.classifier = nn.Sequential(
     #     nn.Linear(1920, 512), nn.LeakyReLU(), nn.Linear(512, 8)
     # )
+
+    checkpoint_path = "SER_densenet203.pt"
+    model = models.densenet201(pretrained=True)
+    model.classifier = nn.Sequential(
+        nn.Linear(1920, 512), nn.LeakyReLU(), nn.Linear(512, 6)
+    )
 
     model.load_state_dict(torch.load(checkpoint_path, map_location="cpu"), strict=False)
     model.eval()
