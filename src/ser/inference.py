@@ -4,8 +4,8 @@ from src.ser.commons import get_model, get_tensor
 
 class_names = [
     "angry",
-    "calm",
-    "disgust",
+    # "calm",
+    # "disgust",
     "fearful",
     "happy",
     "neutral",
