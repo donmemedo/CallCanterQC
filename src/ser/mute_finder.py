@@ -1,5 +1,4 @@
 import os
-from src.ser.inference import prediction
 import librosa
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,16 +14,3 @@ def mute_finder(path,filename,samplerate,decibels):
 	yt = librosa.effects.remix(y, index)
 	sf.write(f'{path}/{filename.split(".")[0]}-{decibels}.{filename.split(".")[1]}', yt, samplerate=samplerate)
 
-# PATH='/media/makhataei/Backups/sep/MossFormer2/MossFormer2_standalone/test_samples/GPU_outputs/dumbeldor'
-# a = os.listdir(PATH)
-# for folder in a:
-# 	paths = f'{PATH}/{folder}'
-# 	b = os.listdir(paths)
-# 	for file in b:
-# 		try:
-# 			mute_finder(paths,file,SR,20)
-# 			mute_finder(paths,file,SR,15)
-#
-# 		except:
-# 			pass
-#

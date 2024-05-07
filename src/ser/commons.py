@@ -23,13 +23,13 @@ def get_model():
     #     nn.Linear(1920, 512), nn.LeakyReLU(), nn.Linear(512, 8)
     # )
 
-    checkpoint_path = "SER_densenet203.pt"
+    checkpoint_path = "SER_densenet206.pt"
     model = models.densenet201(pretrained=True)
     model.classifier = nn.Sequential(
         nn.Linear(1920, 512), nn.LeakyReLU(), nn.Linear(512, 6)
     )
 
-    model.load_state_dict(torch.load(checkpoint_path, map_location="cpu"), strict=False)
+    model.load_state_dict(torch.load(checkpoint_path, map_location="cuda"), strict=False)
     model.eval()
     return model
 
