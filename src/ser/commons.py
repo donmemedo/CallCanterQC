@@ -39,7 +39,7 @@ def get_model():
         nn.Linear(1024, 512), nn.LeakyReLU(), nn.Linear(512, 4)
     )
 
-    model.load_state_dict(torch.load(checkpoint_path, map_location="cpu"), strict=False)
+    model.load_state_dict(torch.load(checkpoint_path, map_location="cuda"), strict=False)
     model.eval()
     return model
 
