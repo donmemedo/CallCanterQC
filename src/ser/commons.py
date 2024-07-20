@@ -22,21 +22,11 @@ def get_model():
     # model.classifier = nn.Sequential(
     #     nn.Linear(1920, 512), nn.LeakyReLU(), nn.Linear(512, 8)
     # )
-    checkpoint_path = "SER_densenet4123.pt"
-    model = models.densenet121(pretrained=True)
-    # # ToDo: 6 Grooups
-    # model.classifier = nn.Sequential(
-    #     nn.Linear(1920, 512), nn.LeakyReLU(), nn.Linear(512, 6)
-    # )
-    #
-    # model.load_state_dict(torch.load(checkpoint_path, map_location="cuda"), strict=False)
-    # model.eval()
-    # return model
 
-
-    # ToDo: 4 Grooups
+    checkpoint_path = "SER_densenet206.pt"
+    model = models.densenet201(pretrained=True)
     model.classifier = nn.Sequential(
-        nn.Linear(1024, 512), nn.LeakyReLU(), nn.Linear(512, 4)
+        nn.Linear(1920, 512), nn.LeakyReLU(), nn.Linear(512, 6)
     )
 
     model.load_state_dict(torch.load(checkpoint_path, map_location="cuda"), strict=False)
