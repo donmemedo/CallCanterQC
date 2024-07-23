@@ -1,0 +1,60 @@
+121:
+LOSS-0.6532981725608777
+ACCURACY-74.30227987421384
+Test Loss: 0.647574
+
+Test Accuracy of angry: 77% (2211/2862)
+Test Accuracy of happy: 61% (1409/2309)
+Test Accuracy of neutral: 82% (2206/2670)
+Test Accuracy of   sad: 74% (1737/2335)
+
+Test Accuracy (Overall): 74% (7563/10176)
+
+
+
+
+
+122:
+LOSS-0.638920691028331
+ACCURACY-74.70518867924528
+Test Loss: 0.638592
+
+Test Accuracy of angry: 78% (2238/2862)
+Test Accuracy of happy: 63% (1467/2309)
+Test Accuracy of neutral: 81% (2185/2670)
+Test Accuracy of   sad: 74% (1736/2335)
+
+Test Accuracy (Overall): 74% (7626/10176)
+
+
+
+
+
+201:
+LOSS-0.6315842067014497
+ACCURACY-74.54795598421457
+Test Loss: 0.624782
+
+Test Accuracy of angry: 77% (2219/2862)
+Test Accuracy of happy: 67% (1553/2309)
+Test Accuracy of neutral: 79% (2130/2670)
+Test Accuracy of   sad: 75% (1758/2335)
+
+Test Accuracy (Overall): 75% (7660/10176)
+
+
+
+
+
+202:
+LOSS-0.8699089083469139
+ACCURACY-63.24685522407856
+Test Loss: 0.862019
+
+Test Accuracy of angry: 69% (1996/2862)
+Test Accuracy of happy: 41% (963/2309)
+Test Accuracy of neutral: 78% (2092/2670)
+Test Accuracy of   sad: 61% (1426/2335)
+
+Test Accuracy (Overall): 63% (6477/10176)
+
